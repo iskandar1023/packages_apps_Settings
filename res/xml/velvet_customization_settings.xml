@@ -27,4 +27,16 @@
             android:title="@string/network_traffic_title" />
     </PreferenceCategory>
 
+    <!-- Navigation bar -->
+    <PreferenceCategory
+        android:key="navigationbar"
+        android:title="@string/navigationbar_section_header" >
+
+   	<com.android.settings.preference.SystemSettingSwitchPreference
+            android:key="double_tap_sleep_navbar"
+            android:title="@string/double_tap_sleep_nav_bar_title"
+            android:summary="@string/double_tap_sleep_nav_bar_summary"
+            android:defaultValue="false" />
+    </PreferenceCategory>
+
 </PreferenceScreen>
