@@ -31,4 +31,10 @@
     <!-- Settings tile title -->
     <string name="customization_settings_title">Customization</string>
 
+    <!-- Heads up -->
+    <string name="headsup_section_header">Heads up notifications</string>
+    <string name="heads_up_notifications">Heads up</string>
+    <string name="summary_heads_up_enabled">Pop-up notifications are enabled</string>
+    <string name="summary_heads_up_disabled">Pop-up notifications are disabled</string>
+
 </resources>
