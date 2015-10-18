@@ -31,6 +31,13 @@
     <!-- Settings tile title -->
     <string name="customization_settings_title">Customization</string>
 
+    <!-- Section headers -->
+    <string name="statusbar_section_header">Status bar</string>
+
+    <!-- Double Tap Status Bar to Sleep -->
+    <string name="double_tap_to_sleep_title">Double-tap to sleep</string>
+    <string name="double_tap_to_sleep_summary">Double-tap on the status bar or top third and bottom shortcut area of the lock screen to turn off the display</string>
+
     <!-- Heads up -->
     <string name="headsup_section_header">Heads up notifications</string>
     <string name="heads_up_notifications">Heads up</string>
