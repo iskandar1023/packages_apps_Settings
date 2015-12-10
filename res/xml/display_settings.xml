@@ -105,6 +105,13 @@
                 android:summary="%s"
                 android:title="@string/display_auto_rotate_title" />
 
+        <com.android.settings.preference.SystemSettingSwitchPreference
+                android:key="swap_volume_buttons"
+                android:title="@string/swap_volume_buttons_title"
+                android:summary="@string/swap_volume_buttons_summary"
+                android:dependency="accelerometer"
+                android:defaultValue="true"/>
+
         <PreferenceScreen
                 android:key="wifi_display"
                 android:title="@string/wifi_display_settings_title"
