@@ -76,6 +76,12 @@
         android:key="misc"
         android:title="@string/miscellaneous_section_header" >
 
+        <com.android.settings.preference.SystemSettingSwitchPreference
+            android:key="fingerprint_success_vib"
+            android:title="@string/fprint_sucess_vib_title"
+            android:summary="@string/fprint_sucess_vib_summary"
+            android:defaultValue="true" />
+
         <PreferenceScreen
             android:key="systemui_tuner_other"
             android:title="@string/systemui_tuner_other_title" >
