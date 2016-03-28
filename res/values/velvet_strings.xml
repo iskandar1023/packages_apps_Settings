@@ -69,4 +69,7 @@
     <string name="block_on_secure_keyguard_title">Disable quick settings</string>
     <string name="block_on_secure_keyguard_summary">On secure lockscreen</string>
 
+    <!-- Charging vibration -->
+    <string name="charging_vibration_title">Charging vibration</string>
+
 </resources>
