@@ -44,4 +44,7 @@
     <string name="summary_heads_up_enabled">Pop-up notifications are enabled</string>
     <string name="summary_heads_up_disabled">Pop-up notifications are disabled</string>
 
+    <!-- Charging vibration -->
+    <string name="charging_vibration_title">Charging vibration</string>
+
 </resources>
