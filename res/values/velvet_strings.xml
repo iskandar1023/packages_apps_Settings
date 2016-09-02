@@ -27,4 +27,8 @@
    <!-- Phone info shortcut -->
     <string name="device_info_title">Phone info</string>
 
+<!-- Customization Settings -->
+    <!-- Settings tile title -->
+    <string name="customization_settings_title">Customization</string>
+
 </resources>
