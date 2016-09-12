@@ -14,6 +14,12 @@
             android:title="@string/double_tap_to_sleep_title"
             android:summary="@string/double_tap_to_sleep_summary"
             android:defaultValue="false" />
+
+        <PreferenceScreen
+            android:key="network_traffic_state"
+            android:fragment="com.android.settings.NetworkTraffic"
+            android:summary="@string/network_traffic_summary"
+            android:title="@string/network_traffic_title" />
     </PreferenceCategory>
 
 </PreferenceScreen>
