@@ -1297,12 +1297,9 @@
             android:icon="@drawable/ic_settings_customization"
             android:taskAffinity=""
             android:parentActivityName="Settings">
-            <intent-filter android:priority="1">
-                <action android:name="com.android.settings.action.SETTINGS" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
             <intent-filter android:priority="4">
                 <action android:name="com.android.settings.action.SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <meta-data android:name="com.android.settings.category"
                 android:value="com.android.settings.category.personal" />
