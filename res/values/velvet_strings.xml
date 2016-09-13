@@ -35,9 +35,13 @@
     <string name="statusbar_section_header">Status bar</string>
     <string name="navigationbar_section_header">Navigation bar</string>
 
+    <!-- Double Tap Navbar to Sleep -->
+    <string name="double_tap_sleep_nav_bar_title">Double-tap to sleep</string>
+    <string name="double_tap_sleep_nav_bar_summary">Double-tap on the navigation bar to put the device to sleep</string>
+
     <!-- Double Tap Status Bar to Sleep -->
     <string name="double_tap_to_sleep_title">Double-tap to sleep</string>
-    <string name="double_tap_to_sleep_summary">Double-tap on the status bar or top third and bottom shortcut area of the lock screen to turn off the display</string>
+    <string name="double_tap_to_sleep_summary">Double-tap on the status bar to put the device to sleep</string>
 
     <!-- Network traffic -->
     <string name="network_traffic_title">Network traffic</string>
@@ -63,10 +67,6 @@
     <string name="status_bar_toggle_brightness">Brightness control</string>
     <string name="status_bar_toggle_brightness_summary">Adjust brightness by sliding across status bar</string>
     <string name="status_bar_toggle_info">Automatic brightness must be disabled</string>
-
-    <!-- Double Tap Navbar to Sleep -->
-    <string name="double_tap_sleep_nav_bar_title">Navigation bar</string>
-    <string name="double_tap_sleep_nav_bar_summary">Double tap navigation bar to put the device to sleep</string>
 
 <!-- Miscellaneous -->
     <!-- Heads up -->
