@@ -34,6 +34,7 @@
     <!-- Section headers -->
     <string name="statusbar_section_header">Status bar</string>
     <string name="navigationbar_section_header">Navigation bar</string>
+    <string name="miscellaneous_section_header">Miscellaneous</string>
 
     <!-- Double Tap Navbar to Sleep -->
     <string name="double_tap_sleep_nav_bar_title">Double-tap to sleep</string>
@@ -67,6 +68,13 @@
     <string name="status_bar_toggle_brightness">Brightness control</string>
     <string name="status_bar_toggle_brightness_summary">Adjust brightness by sliding across status bar</string>
     <string name="status_bar_toggle_info">Automatic brightness must be disabled</string>
+
+    <!-- SystemUI Tuner Parts -->
+    <string name="systemui_tuner_statusbar_title">Status bar items</string>
+    <string name="systemui_tuner_statusbar_summary">Show/hide status bar items</string>
+    <string name="systemui_tuner_navbar_title">Navigation bar items</string>
+    <string name="systemui_tuner_navbar_summary">Edit navigation bar items</string>
+    <string name="systemui_tuner_other_title">System UI settings</string>
 
 <!-- Miscellaneous -->
     <!-- Heads up -->
