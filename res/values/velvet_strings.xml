@@ -77,4 +77,7 @@
     <!-- Charging vibration -->
     <string name="charging_vibration_title">Charging vibration</string>
 
+    <!-- substratum dashboard tile title -->
+    <string name="substratum_settings_title">Substratum</string>
+
 </resources>
