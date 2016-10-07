@@ -82,6 +82,15 @@
     <string name="systemui_tuner_navbar_title">Navigation bar items</string>
     <string name="systemui_tuner_navbar_summary">Edit navigation bar items</string>
     <string name="systemui_tuner_other_title">System UI settings</string>
+    <string name="show_brightness">Show brightness in Quick Settings</string>
+    <string name="overview_nav_bar_gesture">Enable split-screen swipe-up gesture</string>
+    <string name="overview_nav_bar_gesture_desc">Enable gesture to enter split-screen by swiping up from the Overview button</string>
+    <string name="tuner_full_zen_title">Show with volume controls</string>
+    <string name="volume_down_silent">Enter do not disturb on volume down</string>
+    <string name="status_bar_battery_percent_title">Battery percent</string>
+    <string name="status_bar_battery_percent_summary">Display percent in battery drawable</string>
+    <string name="color_and_appearance">Color and appearance</string>
+    <string name="tuner_full_importance_settings">Power notification controls</string>
 
 <!-- Miscellaneous -->
     <!-- Volume button orientation based on current rotation -->
