@@ -87,8 +87,6 @@
     <string name="overview_nav_bar_gesture_desc">Enable gesture to enter split-screen by swiping up from the Overview button</string>
     <string name="tuner_full_zen_title">Show with volume controls</string>
     <string name="volume_down_silent">Enter do not disturb on volume down</string>
-    <string name="status_bar_battery_percent_title">Battery percent</string>
-    <string name="status_bar_battery_percent_summary">Display percent in battery drawable</string>
     <string name="color_and_appearance">Color and appearance</string>
     <string name="tuner_full_importance_settings">Power notification controls</string>
 
