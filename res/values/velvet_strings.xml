@@ -82,7 +82,8 @@
     <string name="systemui_tuner_navbar_title">Navigation bar items</string>
     <string name="systemui_tuner_navbar_summary">Edit navigation bar items</string>
     <string name="systemui_tuner_other_title">System UI settings</string>
-    <string name="show_brightness">Show brightness in Quick Settings</string>
+    <string name="show_brightness_title">Quick Settings brightness slider</string>
+    <string name="show_brightness_summary">Show brightness slider in Quick Settings</string>
     <string name="overview_nav_bar_gesture">Enable split-screen swipe-up gesture</string>
     <string name="overview_nav_bar_gesture_desc">Enable gesture to enter split-screen by swiping up from the Overview button</string>
     <string name="tuner_full_zen_title">Show with volume controls</string>
