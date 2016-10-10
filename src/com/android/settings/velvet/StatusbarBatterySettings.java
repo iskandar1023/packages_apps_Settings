@@ -55,7 +55,6 @@ public class StatusbarBatterySettings extends SettingsPreferenceFragment impleme
     private static final String STATUSBAR_BATTERY_PERCENT = "statusbar_battery_percent";
     private static final String STATUSBAR_BATTERY_PERCENT_INSIDE = "statusbar_battery_percent_inside";
     private static final String STATUSBAR_BATTERY_SHOW_BOLT = "statusbar_battery_charging_image";
-    private static final String STATUSBAR_BATTERY_ENABLE = "statusbar_battery_enable";
 
     private ListPreference mBatteryStyle;
     private ListPreference mBatteryPercent;
@@ -63,8 +62,6 @@ public class StatusbarBatterySettings extends SettingsPreferenceFragment impleme
     private SystemSettingSwitchPreference mShowBolt;
     private int mShowPercent;
     private int mBatteryStyleValue;
-    private ListPreference mBatteryEnable;
-    private int mShowBattery = 1;
 
     @Override
     protected int getMetricsCategory() {
@@ -99,14 +96,6 @@ public class StatusbarBatterySettings extends SettingsPreferenceFragment impleme
 
         mShowBolt = (SystemSettingSwitchPreference) findPreference(STATUSBAR_BATTERY_SHOW_BOLT);
 
-        mBatteryEnable = (ListPreference) findPreference(STATUSBAR_BATTERY_ENABLE);
-        mShowBattery = Settings.System.getInt(resolver,
-                Settings.System.STATUSBAR_BATTERY_ENABLE, 1);
-
-        mBatteryEnable.setValue(Integer.toString(mShowBattery));
-        mBatteryEnable.setSummary(mBatteryEnable.getEntry());
-        mBatteryEnable.setOnPreferenceChangeListener(this);
-
         updateEnablement();
     }
 
@@ -135,23 +124,14 @@ public class StatusbarBatterySettings extends SettingsPreferenceFragment impleme
             Settings.System.putInt(getContentResolver(),
                     Settings.System.STATUSBAR_BATTERY_PERCENT, mShowPercent);
             updateEnablement();
-        } else if (preference == mBatteryEnable) {
-            mShowBattery = Integer.valueOf((String) newValue);
-            int index = mBatteryEnable.findIndexOfValue((String) newValue);
-            mBatteryEnable.setSummary(
-                    mBatteryEnable.getEntries()[index]);
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.STATUSBAR_BATTERY_ENABLE, mShowBattery);
-            updateEnablement();
         }
         return true;
     }
 
     private void updateEnablement() {
-        mPercentInside.setEnabled(mShowBattery != 0 && mBatteryStyleValue < 3 && mShowPercent != 0);
+        mPercentInside.setEnabled(mBatteryStyleValue != 5 && mBatteryStyleValue < 3 && mShowPercent != 0);
         mShowBolt.setEnabled(mBatteryStyleValue < 3);
-        mBatteryStyle.setEnabled(mShowBattery != 0);
-        mBatteryPercent.setEnabled(mShowBattery != 0 && mBatteryStyleValue != 3);
+        mBatteryPercent.setEnabled(mBatteryStyleValue != 5 && mBatteryStyleValue != 3);
     }
 
     public static final Indexable.SearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =

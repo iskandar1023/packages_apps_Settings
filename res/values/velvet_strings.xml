@@ -104,7 +104,6 @@
     <string name="statusbar_charging_image_title">Charging indicator</string>
     <string name="statusbar_category_charging_title">Charging</string>
     <string name="statusbar_charging_image_summary">Display bolt indicator while charging. Hides percent overlay</string>
-    <string name="battery_enable_title">Show battery</string>
 
 <!-- Miscellaneous -->
     <!-- Volume button orientation based on current rotation -->
