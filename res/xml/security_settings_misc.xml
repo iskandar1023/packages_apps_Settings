@@ -108,6 +108,11 @@
             android:title="@string/advanced_security_title"
             android:persistent="false">
 
+        <com.android.settings.preference.SecureSettingSwitchPreference
+                android:key="lockscreen_qs_disabled"
+                android:title="@string/lockscreen_qs_disabled_title"
+                android:summary="@string/lockscreen_qs_disabled_summary" />
+
         <Preference android:key="manage_trust_agents"
                 android:title="@string/manage_trust_agents"
                 android:summary="@string/manage_trust_agents_summary"
