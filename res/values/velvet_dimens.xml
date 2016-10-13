@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="dashboard_category_padding_top">0dip</dimen>
+    <dimen name="dashboard_category_padding_bottom">8dip</dimen>
+
+</resources>
