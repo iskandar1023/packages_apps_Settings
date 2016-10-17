@@ -37,6 +37,12 @@
             android:defaultValue="false" />
 
         <PreferenceScreen
+            android:fragment="com.android.settings.velvet.fragments.CarrierLabelSettings"
+            android:key="carrier_label_settings"
+            android:title="@string/carrier_label_settings_title"
+            android:summary="@string/carrier_label_settings_summary" />
+
+        <PreferenceScreen
             android:key="network_traffic_state"
             android:fragment="com.android.settings.NetworkTraffic"
             android:summary="@string/network_traffic_summary"
