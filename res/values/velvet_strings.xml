@@ -339,4 +339,9 @@
     <string name="fprint_sucess_vib_title">Fingerprint authentication vibration</string>
     <string name="fprint_sucess_vib_summary">Vibrate on successful fingerprint authentication</string>
 
+    <!-- Dynamic notification tint -->
+    <string name="notification_tint_title">Dynamic notification title color</string>
+    <string name="notification_tint_summary_off">Title color on notification will be handled by the theme</string>
+    <string name="notification_tint_summary_on">Title color on notification will be taken from app icon color</string>
+
 </resources>
