@@ -349,4 +349,9 @@
     <string name="doze_notification_color_invert_summary_off">Doze notifications will not be inverted</string>
     <string name="doze_notification_color_invert_summary_on">Doze notifications will be inverted</string>
 
+    <!-- Optional screenshot type -->
+    <string name="screenshot_type_title">Screenshot type</string>
+    <string name="screenshot_type_fullscreen">Take fullscreen screenshots</string>
+    <string name="screenshot_type_partial">Drag selection on the area you want to take as a screenshot</string>
+
 </resources>
