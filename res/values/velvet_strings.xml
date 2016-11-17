@@ -40,6 +40,7 @@
 
     <!-- Section headers -->
     <string name="navigationbar_section_header">Navigation bar</string>
+    <string name="notifdrawer_section_header">Notification drawer</string>
     <string name="statusbar_section_header">Status bar</string>
     <string name="miscellaneous_section_header">Miscellaneous</string>
 
