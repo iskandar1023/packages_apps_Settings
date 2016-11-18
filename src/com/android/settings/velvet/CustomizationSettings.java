@@ -4,9 +4,7 @@ import android.os.Bundle;
 
 import android.content.Context;
 import android.hardware.fingerprint.FingerprintManager;
-import android.provider.Settings;
 
-import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.Preference.OnPreferenceChangeListener;
 import android.support.v7.preference.PreferenceCategory;
@@ -27,10 +25,8 @@ public class CustomizationSettings extends SettingsPreferenceFragment implements
 
     private static final String FINGERPRINT_VIB = "fingerprint_success_vib";
     private static final String QS_COLUMNS = "qs_columns";
-    private static final String SCREENSHOT_TYPE = "screenshot_type";
 
     private FingerprintManager mFingerprintManager;
-    private ListPreference mScreenshotType;
     private ListPreference mQsColumns;
     private SystemSettingSwitchPreference mFingerprintVib;
 
@@ -53,13 +49,6 @@ public class CustomizationSettings extends SettingsPreferenceFragment implements
             miscCategory.removePreference(mFingerprintVib);
         }
 
-        mScreenshotType = (ListPreference) findPreference(SCREENSHOT_TYPE);
-        int mScreenshotTypeValue = Settings.System.getInt(getActivity().getContentResolver(),
-                Settings.System.SCREENSHOT_TYPE, 0);
-        mScreenshotType.setValue(String.valueOf(mScreenshotTypeValue));
-        mScreenshotType.setSummary(mScreenshotType.getEntry());
-        mScreenshotType.setOnPreferenceChangeListener(this);
-
         mQsColumns = (ListPreference) findPreference(QS_COLUMNS);
         int mQsColumnsValue = Settings.System.getInt(getActivity().getContentResolver(),
                Settings.System.QS_LAYOUT_COLUMNS, 3);
@@ -69,15 +58,7 @@ public class CustomizationSettings extends SettingsPreferenceFragment implements
     }
 
     public boolean onPreferenceChange(Preference preference, Object objValue) {
-        if  (preference == mScreenshotType) {
-            int mScreenshotTypeValue = Integer.parseInt(((String) objValue).toString());
-            mScreenshotType.setSummary(
-                    mScreenshotType.getEntries()[mScreenshotTypeValue]);
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.SCREENSHOT_TYPE, mScreenshotTypeValue);
-            mScreenshotType.setValue(String.valueOf(mScreenshotTypeValue));
-            return true;
-        } else if (preference == mQsColumns) {
+        if (preference == mQsColumns) {
             int mQsColumnsValue = Integer.parseInt(((String) objValue).toString());
             mQsColumns.setSummary(mQsColumns.getEntries()[mQsColumnsValue - 3]);
             Settings.System.putInt(getContentResolver(),
