@@ -26,10 +26,12 @@ public class CustomizationSettings extends SettingsPreferenceFragment implements
     private static final String MISC_CAT = "misc";
 
     private static final String FINGERPRINT_VIB = "fingerprint_success_vib";
+    private static final String QS_COLUMNS = "qs_columns";
     private static final String SCREENSHOT_TYPE = "screenshot_type";
 
     private FingerprintManager mFingerprintManager;
     private ListPreference mScreenshotType;
+    private ListPreference mQsColumns;
     private SystemSettingSwitchPreference mFingerprintVib;
 
     @Override
@@ -57,6 +59,13 @@ public class CustomizationSettings extends SettingsPreferenceFragment implements
         mScreenshotType.setValue(String.valueOf(mScreenshotTypeValue));
         mScreenshotType.setSummary(mScreenshotType.getEntry());
         mScreenshotType.setOnPreferenceChangeListener(this);
+
+        mQsColumns = (ListPreference) findPreference(QS_COLUMNS);
+        int mQsColumnsValue = Settings.System.getInt(getActivity().getContentResolver(),
+               Settings.System.QS_LAYOUT_COLUMNS, 3);
+        mQsColumns.setValue(String.valueOf(mQsColumnsValue));
+        mQsColumns.setSummary(mQsColumns.getEntry());
+        mQsColumns.setOnPreferenceChangeListener(this);
     }
 
     public boolean onPreferenceChange(Preference preference, Object objValue) {
@@ -67,6 +76,12 @@ public class CustomizationSettings extends SettingsPreferenceFragment implements
             Settings.System.putInt(getContentResolver(),
                     Settings.System.SCREENSHOT_TYPE, mScreenshotTypeValue);
             mScreenshotType.setValue(String.valueOf(mScreenshotTypeValue));
+            return true;
+        } else if (preference == mQsColumns) {
+            int mQsColumnsValue = Integer.parseInt(((String) objValue).toString());
+            mQsColumns.setSummary(mQsColumns.getEntries()[mQsColumnsValue - 3]);
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.QS_LAYOUT_COLUMNS, mQsColumnsValue);
             return true;
         }
         return false;

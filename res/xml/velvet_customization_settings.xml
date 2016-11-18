@@ -66,6 +66,12 @@
             android:summary="@string/show_brightness_summary"
             android:defaultValue="true" />
 
+        <ListPreference
+            android:entries="@array/qs_columns_entries"
+            android:entryValues="@array/qs_columns_values"
+            android:key="qs_columns"
+            android:title="@string/qs_columns_title" />
+
     </PreferenceCategory>
 
     <!-- Navigation bar -->

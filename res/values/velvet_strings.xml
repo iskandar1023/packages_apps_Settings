@@ -303,6 +303,12 @@
     <string name="show_carrier_statusbar">Statusbar only</string>
     <string name="show_carrier_enabled">Lockscreen &amp; statusbar</string>
 
+    <!-- QS column options -->
+    <string name="qs_columns_title">Quick Settings columns</string>
+    <string name="qs_columns_three">3 columns</string>
+    <string name="qs_columns_four">4 columns</string>
+    <string name="qs_columns_five">5 columns</string>
+
 <!-- Miscellaneous -->
     <!-- Volume button orientation based on current rotation -->
     <string name="swap_volume_buttons_title">Swap volume rocker orientation</string>
