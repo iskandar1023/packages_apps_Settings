@@ -17,8 +17,8 @@ import com.android.internal.logging.MetricsProto.MetricsEvent;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;
-import com.android.settings.preference.CustomSeekBarPreference;
 import com.android.settings.preference.SystemSettingSwitchPreference;
+
 
 public class CustomizationSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
@@ -26,10 +26,8 @@ public class CustomizationSettings extends SettingsPreferenceFragment implements
     private static final String MISC_CAT = "misc";
 
     private static final String FINGERPRINT_VIB = "fingerprint_success_vib";
-    private static final String PREF_COLUMNS = "qs_layout_columns";
     private static final String SCREENSHOT_TYPE = "screenshot_type";
 
-    private CustomSeekBarPreference mQsColumns;
     private FingerprintManager mFingerprintManager;
     private ListPreference mScreenshotType;
     private SystemSettingSwitchPreference mFingerprintVib;
@@ -59,11 +57,6 @@ public class CustomizationSettings extends SettingsPreferenceFragment implements
         mScreenshotType.setValue(String.valueOf(mScreenshotTypeValue));
         mScreenshotType.setSummary(mScreenshotType.getEntry());
         mScreenshotType.setOnPreferenceChangeListener(this);
-
-        mQsColumns = (CustomSeekBarPreference) findPreference(PREF_COLUMNS);
-        int columnsQs = Settings.System.getInt(getActivity().getContentResolver(), Settings.System.QS_LAYOUT_COLUMNS, 3);
-        mQsColumns.setValue(columnsQs / 1);
-        mQsColumns.setOnPreferenceChangeListener(this);
     }
 
     public boolean onPreferenceChange(Preference preference, Object objValue) {
@@ -74,10 +67,6 @@ public class CustomizationSettings extends SettingsPreferenceFragment implements
             Settings.System.putInt(getContentResolver(),
                     Settings.System.SCREENSHOT_TYPE, mScreenshotTypeValue);
             mScreenshotType.setValue(String.valueOf(mScreenshotTypeValue));
-            return true;
-        } else if (preference == mQsColumns) {
-            int qsColumns = (Integer) objValue;
-            Settings.System.putInt(getContentResolver(), Settings.System.QS_LAYOUT_COLUMNS, qsColumns * 1);
             return true;
         }
         return false;

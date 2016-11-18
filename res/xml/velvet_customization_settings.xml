@@ -66,14 +66,6 @@
             android:summary="@string/show_brightness_summary"
             android:defaultValue="true" />
 
-        <com.android.settings.preference.CustomSeekBarPreference
-            android:key="qs_layout_columns"
-            android:title="@string/qs_columns_title"
-            android:max="7"
-            settings:min="1"
-            settings:units=""
-            android:persistent="false" />
-
     </PreferenceCategory>
 
     <!-- Navigation bar -->
