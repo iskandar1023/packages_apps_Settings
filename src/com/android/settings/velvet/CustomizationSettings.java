@@ -25,10 +25,12 @@ public class CustomizationSettings extends SettingsPreferenceFragment implements
 
     private static final String MISC_CAT = "misc";
 
+    private static final String BATTERY_PERCENTAGE = "status_bar_battery_percentage";
     private static final String FINGERPRINT_VIB = "fingerprint_success_vib";
     private static final String QS_COLUMNS = "qs_columns";
 
     private FingerprintManager mFingerprintManager;
+    private ListPreference mBatteryPercentage;
     private ListPreference mQsColumns;
     private SystemSettingSwitchPreference mFingerprintVib;
 
@@ -57,6 +59,13 @@ public class CustomizationSettings extends SettingsPreferenceFragment implements
         mQsColumns.setValue(String.valueOf(mQsColumnsValue));
         mQsColumns.setSummary(mQsColumns.getEntry());
         mQsColumns.setOnPreferenceChangeListener(this);
+
+        mBatteryPercentage = (ListPreference) findPreference(BATTERY_PERCENTAGE);
+        int mBatteryPercentageValue = Settings.Secure.getInt(getActivity().getContentResolver(),
+               Settings.Secure.STATUS_BAR_SHOW_BATTERY_PERCENT, 0);
+        mBatteryPercentage.setValue(String.valueOf(mBatteryPercentageValue));
+        mBatteryPercentage.setSummary(mBatteryPercentage.getEntry());
+        mBatteryPercentage.setOnPreferenceChangeListener(this);
     }
 
     public boolean onPreferenceChange(Preference preference, Object objValue) {
@@ -65,6 +74,12 @@ public class CustomizationSettings extends SettingsPreferenceFragment implements
             mQsColumns.setSummary(mQsColumns.getEntries()[mQsColumnsValue - 3]);
             Settings.System.putInt(getContentResolver(),
                     Settings.System.QS_LAYOUT_COLUMNS, mQsColumnsValue);
+            return true;
+        } else if (preference == mBatteryPercentage) {
+            int mBatteryPercentageValue = Integer.parseInt(((String) objValue).toString());
+            mBatteryPercentage.setSummary(mBatteryPercentage.getEntries()[mBatteryPercentageValue]);
+            Settings.Secure.putInt(getContentResolver(),
+                    Settings.Secure.STATUS_BAR_SHOW_BATTERY_PERCENT, mBatteryPercentageValue);
             return true;
         }
         return false;

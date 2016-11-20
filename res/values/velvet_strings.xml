@@ -295,6 +295,12 @@
     <string name="qs_columns_four">4 columns</string>
     <string name="qs_columns_five">5 columns</string>
 
+    <!-- Status bar battery text options -->
+    <string name="status_bar_battery_percentage_title">Battery percentage text</string>
+    <string name="status_bar_battery_percentage_hidden">Hidden</string>
+    <string name="status_bar_battery_percentage_inside">Inside battery icon</string>
+    <string name="status_bar_battery_percentage_outside">Beside battery icon</string>
+
 <!-- Miscellaneous -->
     <!-- Volume button orientation based on current rotation -->
     <string name="swap_volume_buttons_title">Swap volume rocker orientation</string>
