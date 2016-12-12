@@ -20,7 +20,10 @@
 
         <!-- Velvet Logo Header -->
         <PreferenceScreen android:key="velvet_logo"
-                android:layout="@layout/about_logo_row" />
+                android:layout="@layout/about_logo_row">
+                <intent android:action="android.intent.action.VIEW"
+                        android:data="https://github.com/VelvetProject/" />
+        </PreferenceScreen>
 
         <!-- Device status - launches activity -->
         <PreferenceScreen android:key="status_info"

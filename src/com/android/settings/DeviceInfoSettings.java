@@ -67,6 +67,7 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
     private static final String KEY_DEVICE_FEEDBACK = "device_feedback";
     private static final String KEY_MOD_BUILD_DATE = "build_date";
     private static final String KEY_VENDOR_VERSION = "vendor_version";
+    private static final String KEY_VELVET_LOGO = "velvet_logo";
 
     static final int TAPS_TO_BE_A_DEVELOPER = 7;
 
@@ -270,6 +271,13 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
             }
         } else if (preference.getKey().equals(KEY_DEVICE_FEEDBACK)) {
             sendFeedback();
+        } else if (preference.getKey().equals(KEY_VELVET_LOGO)) {
+            if (getPackageManager().queryIntentActivities(preference.getIntent(), 0).isEmpty()) {
+                // Don't send out the intent to stop crash
+                Log.w(LOG_TAG, "Stop click action on " + KEY_VELVET_LOGO + ": "
+                        + "queryIntentActivities() returns empty" );
+                return true;
+            }
         }
         return super.onPreferenceTreeClick(preference);
     }
