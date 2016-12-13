@@ -75,6 +75,12 @@
             android:title="@string/double_tap_sleep_nav_bar_title"
             android:summary="@string/double_tap_sleep_nav_bar_summary"
             android:defaultValue="false" />
+
+        <com.android.settings.preference.SystemSettingSwitchPreference
+            android:key="long_press_navbar_screenshot"
+            android:title="@string/long_press_navbar_screenshot_title"
+            android:summary="@string/long_press_navbar_screenshot_summary"
+            android:defaultValue="false" />
     </PreferenceCategory>
 
     <!-- Miscellaneous -->
