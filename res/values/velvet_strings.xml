@@ -150,6 +150,10 @@
     <string name="text_charging_symbol_flash">Flash</string>
     <string name="text_charging_symbol_tilde">Tilde</string>
 
+    <!-- Long press navbar screenshot -->
+    <string name="long_press_navbar_screenshot_title">Long press to screenshot</string>
+    <string name="long_press_navbar_screenshot_summary">Long press on the navigation bar to take device screenshot</string>
+
 <!-- Miscellaneous -->
     <!-- Volume button orientation based on current rotation -->
     <string name="swap_volume_buttons_title">Swap volume rocker orientation</string>
