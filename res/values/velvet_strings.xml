@@ -33,8 +33,9 @@
     <string name="device_info_title">Phone info</string>
 
 <!-- Customization Settings -->
-    <!-- Settings tile title -->
+    <!-- Settings tile title and summary -->
     <string name="customization_settings_title">Customization</string>
+    <string name="customization_settings_summary">Change the look and behavior of your phone</string>
 
     <!-- Section headers -->
     <string name="statusbar_section_header">Status bar</string>
