@@ -20,7 +20,9 @@
     <string name="advanced_reboot_title">Advanced reboot</string>
     <string name="advanced_reboot_summary">When unlocked, include options in the power menu for rebooting into recovery, bootloader or performing a soft reboot</string>
     <!-- Advanced settings summary -->
+    <string name="dev_advanced_settings_title">@string/advanced_section_header</string>
     <string name="dev_advanced_settings_summary">For the experienced user</string>
+    <string name="dev_advanced_already_enabled">No need, advanced settings are enabled by default.</string>
 
 <!-- Device Info Settings -->
     <!-- Vendor version -->
