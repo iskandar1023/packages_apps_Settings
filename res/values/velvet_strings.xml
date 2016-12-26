@@ -19,6 +19,8 @@
     <!-- Advanced reboot options -->
     <string name="advanced_reboot_title">Advanced reboot</string>
     <string name="advanced_reboot_summary">When unlocked, include options in the power menu for rebooting into recovery, bootloader or performing a soft reboot</string>
+    <!-- Advanced settings summary -->
+    <string name="dev_advanced_settings_summary">For the experienced user</string>
 
 <!-- Device Info Settings -->
     <!-- Vendor version -->
@@ -176,5 +178,9 @@
     <string name="hex_hint">#ff000000</string>
     <string name="set">Set</string>
     <string name="color_default">Default</string>
+
+<!-- Accessibility settings -->
+    <!-- Summary text -->
+    <string name="accessibility_settings_summary">Easier access</string>
 
 </resources>
