@@ -166,6 +166,7 @@
 
     <!-- substratum dashboard tile title -->
     <string name="substratum_settings_title">Substratum</string>
+    <string name="substratum_settings_summary">Manage your themes</string>
 
     <!-- fingerprint authentication vibration -->
     <string name="fprint_sucess_vib_title">Fingerprint authentication vibration</string>
