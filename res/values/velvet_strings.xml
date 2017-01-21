@@ -159,6 +159,10 @@
     <string name="long_press_navbar_screenshot_title">Long press to screenshot</string>
     <string name="long_press_navbar_screenshot_summary">Long press on the navigation bar to take device screenshot</string>
 
+    <!-- One handed mode -->
+    <string name="one_handed_mode_title">One handed mode</string>
+    <string name="one_handed_mode_summary">Allows swiping on the navigation bar to enable one handed mode</string>
+
 <!-- Miscellaneous -->
     <!-- Volume button orientation based on current rotation -->
     <string name="swap_volume_buttons_title">Swap volume rocker orientation</string>
